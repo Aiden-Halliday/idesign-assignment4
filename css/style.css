@@ -2,9 +2,6 @@
 
 - mobile support
 */
-*{
-    border: 1px solid red !important;
-}
 
 html{
     scroll-behavior: smooth;

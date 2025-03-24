@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- metadata -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="recreation of a website design">
+        <meta name="robots" content="noindex, nofollow">
+        <title>Recreated Design | Aiden Halliday</title>
+        <link rel="shortcut icon" href="./imgs/logo.png" type="image/x-icon">
+        <!-- fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <!-- css -->
+        <link rel="stylesheet" href="./css/reset.css">
+        <link rel="stylesheet" href="./css/style.css">
+        <!-- jQuery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="./js/scrollHeader.js" defer></script>
+    </head>
+    <body>
+        <header>
+            <div class ="desktop-nav">
+                <div class="logo">
+                    <a href="index.html"> 
+                        <img src="./imgs/logo.png" alt="sample logo">
+                    </a>
+                </div>
+                <nav>
+                    <menu>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html">About</a></li>
+                        <li><a href="index.html">Contact</a></li>
+                    </menu>
+                </nav>
+            </div>
+            <div class="mobile-nav">
+                <input id="burger" type="checkbox">
+                <label for="burger">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </label>
+                <nav>
+                  <div class="logo">
+                    <a href="index.html">
+                        <img src="./imgs/logo.png" alt="logo">
+                    </a>
+                  </div>
+                  <menu>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                  </menu>
+                </nav>
+              </div> 
+        </header>
+        <section class="masthead">
+            <div id="overlay">
+                <h1>Assignment 4</h1>
+                <div class="arrow"></div>
+            </div>
+        </section>
+        <main>
+            <section id="sectionOne">
+                <h2>Row One Title</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut in vulputate magna. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce enim ex, sollicitudin eu ex at, tempor ultrices justo. Quisque aliquam ultricies augue non pellentesque. Aliquam nec lacinia sem. Nam dictum lacinia libero, in tempor ipsum aliquet consequat. Curabitur tempus nulla sit amet dolor feugiat eleifend. Ut sit amet rhoncus sapien, gravida egestas turpis.</p>
+            </section>
+            <section id="sectionTwo">
+                <div>
+                    <h2>CTA One</h2>
+                    <div class="background-zoom"></div>
+                </div>
+                <div>
+                    <h2>CTA Two</h2>
+                    <div class="backgroundTwo-zoom"></div>
+                </div>
+            </section>
+            <section id="sectionThree">
+                <h2>Row Two</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut in vulputate magna. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce enim ex, sollicitudin eu ex at, tempor ultrices justo. Quisque aliquam ultricies augue non pellentesque. Aliquam nec lacinia sem. Nam dictum lacinia libero, in tempor ipsum aliquet consequat.</p>
+                <section id="sectionThreeImage">
+                    <div>
+                        <h2>Row Three</h2>
+                        <div id="button-Container">
+                            <div class="button-1-Container">
+                                <a href="index.html" class = "button-1" >Hover One</a>
+                            </div>
+                            <div class="button-2-Container">
+                                <a href="index.html" class = "button-2" > Hover Two </a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </section>
+            <section id="sectionFive">
+                <form action="index.html" method="POST">
+                    <div id="name-row">
+                        <input type="text" id="first-name" name="first-name" placeholder="First Name" required>
+                        
+                        <input type="text" id="last-name" name="last-name" placeholder="Last Name" required>
+                    </div>
+                    <div>
+                        <input type="email" id="email" name="email" placeholder="Email" required>
+                    </div>
+                    <div>
+                        <textarea id="message" name="message" rows="4" placeholder="Message" required></textarea>
+                    </div>
+                    <input type="submit" value="Submit" id="submit">
+                </form>
+            </section>
+        </main>
+        <footer>
+            <div>
+                <a href="index.html">
+                    <img src="./imgs/logo.png" alt="logo">
+                </a>
+            </div>
+            <h3>Assignment by: Aiden Halliday</h3>
+        </footer>
+    </body>
+</html>

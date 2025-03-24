@@ -16,7 +16,6 @@ p, a, input, textarea{
     font-family: "Quicksand", serif;
 }
 body{
-    min-height: 100vh; 
     min-width: 100vh;
     margin: 0px;
 }
@@ -49,7 +48,7 @@ body{
     margin: 0;
 }
 .desktop-nav nav menu li a{
-    font-size: 1.5em;
+    font-size: 1.5rem;
     padding: 0px 10px;
     text-decoration: none;
     color: #f4f4f4;
@@ -295,29 +294,6 @@ section#sectionOne p{
     font-size: 2em;
     line-height: 1.5;
     letter-spacing: 0.05em;
-}
-
-@media screen and (max-width: 768px){
-    section#sectionTwo{
-        grid-template-columns: none;
-        grid-template-rows: repeat(2, 1fr);
-        height: 160vh;
-    }
-
-    section#sectionTwo div h2{
-        position:absolute;
-        border: #f4f4f4 3px solid;
-        color: #f4f4f4;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        text-align: center;
-        padding: 30% 30%;
-        font-size: 300%;
-        z-index: 9998;
-        transition: all 0.5s;
-        white-space: nowrap;
-    }
 }
 
 

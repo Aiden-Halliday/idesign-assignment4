@@ -15,6 +15,11 @@ h1, h2, h3, h4, h5, h6{
 p, a, input, textarea{
     font-family: "Quicksand", serif;
 }
+body{
+    min-height: 100vh; 
+    min-width: 100vh;
+    margin: 0px;
+}
 
 /* desktop header */
 .desktop-nav{
@@ -55,14 +60,13 @@ p, a, input, textarea{
 
 .desktop-nav.scrolledHeader{
     background-color: rgba(9, 62, 142, 1);
-    height: 80px;
+    height: 10vh;
 }
 
 .mobile-nav{
     display: none;
 }
 
-/*
 @media screen and (max-width: 768px){
     .desktop-nav{
         display: none;
@@ -185,7 +189,7 @@ p, a, input, textarea{
         transition-delay: .25s;
     }
 
-} */
+} 
 
 
 /* masthead */

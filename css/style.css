@@ -1,5 +1,6 @@
 /* to do list
-
+- put form elements to single line in mobile design
+- put 
 - mobile support
 */
 
@@ -13,11 +14,6 @@ h1, h2, h3, h4, h5, h6{
 
 p, a, input, textarea{
     font-family: "Quicksand", serif;
-}
-body{
-    min-height: 100vh; 
-    min-width: 100vh;
-    margin: 0px;
 }
 
 /* desktop header */
@@ -59,13 +55,14 @@ body{
 
 .desktop-nav.scrolledHeader{
     background-color: rgba(9, 62, 142, 1);
-    height: 10vh;
+    height: 80px;
 }
 
 .mobile-nav{
     display: none;
 }
 
+/*
 @media screen and (max-width: 768px){
     .desktop-nav{
         display: none;
@@ -188,7 +185,7 @@ body{
         transition-delay: .25s;
     }
 
-} 
+} */
 
 
 /* masthead */
@@ -294,6 +291,29 @@ section#sectionOne p{
     font-size: 2em;
     line-height: 1.5;
     letter-spacing: 0.05em;
+}
+
+@media screen and (max-width: 768px){
+    section#sectionTwo{
+        grid-template-columns: none;
+        grid-template-rows: repeat(2, 1fr);
+        height: 160vh;
+    }
+
+    section#sectionTwo div h2{
+        position:absolute;
+        border: #f4f4f4 3px solid;
+        color: #f4f4f4;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        padding: 30% 30%;
+        font-size: 300%;
+        z-index: 9998;
+        transition: all 0.5s;
+        white-space: nowrap;
+    }
 }
 
 

@@ -1,8 +1,3 @@
-/* to do list
-- fix submit button in form
-- mobile nav drop down (w3 schools)
-*/
-
 html{
     scroll-behavior: smooth;
 }
@@ -51,6 +46,9 @@ body{
     padding: 0px 10px;
     text-decoration: none;
     color: #f4f4f4;
+}
+.desktop-nav nav menu li a:hover{
+    color: #673AB7;
 }
 .desktop-nav nav menu li:not(:last-child){ /*creates horizontal lines between 1st-2nd links and 2nd-3rd links*/
     border-right: 3px solid #f4f4f4;
@@ -154,12 +152,13 @@ body{
         background-color: rgba(9, 62, 142, 1);
         min-width: 160px;
         z-index: 1;
-        padding:0;
+        padding: 0;
         border: #0e0e0e solid 3px;
+        list-style: none;
     }
     
     /* Links inside the dropdown */
-    .dropdown-content a {
+    .dropdown-content li a {
         color: white;
         padding: 12px 0px;;
         text-decoration: none;
@@ -204,15 +203,18 @@ body{
     justify-content: center;
 }
 
+/*adjusts the h1 a slight bit */
 .masthead div#masthead-overlay h1{
     margin-bottom: 10%;
 }
 
+/* to take the arrow out of the flow of content */
 .masthead div.arrow, .masthead div.arrow:before{
     position: absolute;
     bottom: 20%;
 }
 
+/*creation of arrow */
 .masthead div.arrow{
     width: 40px;
     height: 40px;
@@ -224,6 +226,7 @@ body{
     animation: arrowRotate 4s infinite alternate;
 }
 
+/*creation of smaller arrow as part of the animation */
 .masthead .arrow:before{
     content: "";
     width: 20px;
@@ -236,6 +239,7 @@ body{
     animation: arrow 2s infinite;
 }
 
+/* arrow rotation */
 @keyframes arrowRotate{
     0%{
         transform: rotate(45deg);
@@ -254,19 +258,21 @@ body{
     }
 }
 
+/* smaller arrow fade in */
 @keyframes arrow{
     0%{
         opacity: 1;
     }
     50% {
         opacity: 0;
-        transition: translate(5px, 5px);
+        transform: translate(5px, 5px);
     }
     100%{
         transform: translate(10px, 10px);
     }
 }
 
+/*slight masthead adjusts to make the background look better */
 @media screen and (max-width: 768px){
     .masthead{
         background-position: 50%, 30%;
@@ -274,7 +280,7 @@ body{
     }
 }
 
-/* section 1: white background */
+/* section 1: white background. Uses html's background to serve as the background */
 section#sectionOne{
     color: #0e0e0e;
     padding: 5%;
@@ -293,12 +299,10 @@ section#sectionOne p{
     letter-spacing: 0.05rem;
 }
 
+/* font size adjustments*/
 @media screen and (max-width: 768px){
     section#sectionOne h2{
-        padding-bottom: 5%;
         font-size: 3.5rem;
-        letter-spacing: 0.05rem;
-        font-weight: 500;
     }
     section#sectionOne p{
         font-size: 1.5rem;
@@ -312,7 +316,7 @@ section#sectionTwo{
     width: auto;
     font-weight: 600;
     min-height: 140vh;
-    overflow: hidden;
+    overflow: hidden; /* to create cool hover zoom effect */
 }
 section#sectionTwo div{
     position: relative;
@@ -325,7 +329,7 @@ section#sectionTwo div h2{
     color: #f4f4f4;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); /*positions in the center of the element */
     text-align: center;
     padding: 25% 15%;
     font-size: 300%;
@@ -340,10 +344,9 @@ section#sectionTwo div:first-child div.background-zoom{
     height: 100%;
     width: 100%;
     position: relative;
-    z-index: 1;
+    z-index: 1; 
     transition: all 0.5s;
 }
-
 section#sectionTwo div:last-child div.backgroundTwo-zoom{
     background-image: url(../imgs/7.jpg);
     background-repeat: no-repeat;
@@ -354,6 +357,7 @@ section#sectionTwo div:last-child div.backgroundTwo-zoom{
     z-index: 1;
     transition: all 0.5s;
 }
+/*updates the z index to have the hovered part overlap the other when it zooms */
 section#sectionTwo div:first-child h2:hover + div.background-zoom{
     transform: scale(1.1);
     border: 5px solid black;
@@ -364,6 +368,7 @@ section#sectionTwo div:first-child h2:hover{
     background: radial-gradient(circle,  rgba(7,45,103, 0.5), rgba(103,58,183, 0.5));
 }
 
+/* same but for the other image */
 section#sectionTwo div:last-child h2:hover + div.backgroundTwo-zoom{
     transform: scale(1.1);
     border: 5px solid black;
@@ -374,6 +379,7 @@ section#sectionTwo div:last-child h2:hover{
     background: radial-gradient(circle,  rgba(7,45,103, 0.5), rgba(103,58,183, 0.5));
 }
 
+/* changes the layout to rows on smaller screens and adjusts the padding to fit in bounds */
 @media screen and (max-width: 768px){
     section#sectionTwo{
         grid-template-columns: none;
@@ -421,6 +427,7 @@ section#sectionThree p{
     margin-right: 5%;
 }
 
+/*font size adjustments */
 @media screen and (max-width: 768px){
     section#sectionThree h2{
         font-size: 3.0rem;
@@ -431,7 +438,6 @@ section#sectionThree p{
 }
 
 
-/* Section 3: background image part with two hovers */
 /* Section 3: background image part with two hovers */
 section#sectionThree section#sectionThreeImage{
     height: 120vh;
@@ -448,7 +454,7 @@ section#sectionThree section#sectionThreeImage{
     justify-content: center;
     flex-direction: column;
 }
-section#sectionThree section#sectionThreeImage > div{
+section#sectionThree section#sectionThreeImage > div{ /* shaded overlay */
     background: rgba(0, 0, 0, .3);
     height: 100%;
     width: 100%;
@@ -460,6 +466,7 @@ section#sectionThree section#sectionThreeImage > div h2{
     padding-bottom: 5%;
 }
 
+/* font size and margin adjustments to ensure clip path does not overlap the text */
 @media screen and (max-width: 768px){
     section#sectionThree section#sectionThreeImage > div h2{
         font-size: 3.0rem;
@@ -512,6 +519,7 @@ div.button-2-Container:hover{
     animation: fadingGradient 1s infinite alternate;
 }
 
+/* adjusts the button container to appear in one column on smaller screens */
 @media screen and (max-width: 768px){
     div#button-Container{
         flex-direction: column;
@@ -577,7 +585,7 @@ section#sectionFive form{
 input#first-name, input#last-name, input#email, textarea {
     width: 100%;
     margin-bottom: 2rem;
-    padding: 1%;
+    padding: 2% 1%;
     border: 1px solid #f8f8f8;
     border-radius: 4px;
     font-size: 1.1rem;
@@ -588,10 +596,7 @@ input#first-name, input#last-name, input#email, textarea {
     gap: 4%;
     width: 100%;
 }
-input#first-name, input#last-name{
-    flex: 1;
-    padding: 1%;
-}
+
 textarea#message{
     font-size: 1.2em;
     padding-bottom: 0;
@@ -625,6 +630,7 @@ input#submit:active{
     color: #0e0e0e;
 }
 
+/* changes name container to split into a column instead of one row on smaller screens */
 @media screen and (max-width: 768px){
     #name-row{
         display: flex;
@@ -633,6 +639,7 @@ input#submit:active{
     }
 }
 
+/* adjusts the form to fit the submit button in the early transition from row to column */
 @media screen and (min-width: 600px) and (max-width: 768px) {
     input#submit{
         padding: 1% 5%;

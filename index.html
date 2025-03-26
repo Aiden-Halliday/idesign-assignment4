@@ -15,7 +15,7 @@
         <!-- css -->
         <link rel="stylesheet" href="./css/reset.css">
         <link rel="stylesheet" href="./css/style.css">
-        <!-- jQuery -->
+        <!-- jquery -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
         <script src="./js/scrollHeader.js" defer></script>
     </head>
@@ -41,21 +41,21 @@
                         <img src="./imgs/logo.png" alt="sample logo">
                     </a>
                 </div>
-                <nav class="navbar">
+                <nav class="navbar"> <!-- nav container -->
                     <div class="dropdown">
-                      <button class="buttonDrop">
-                        <span></span>
+                      <button class="buttonDrop"> <!-- drop down menu button -->
+                        <span></span> <!-- to create hamburger button -->
                         <span></span>
                         <span></span>
                       </button>
-                      <menu class="dropdown-content">
-                        <a href="index.html">Home</a>
-                        <a href="#About">About</a>
-                        <a href="#Contact">Contact</a>
+                      <menu class="dropdown-content"> <!-- links to be shown upon hover -->
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#About">About</a></li>
+                        <li><a href="#Contact">Contact</a></li>
                       </menu>
                     </div>
-                  </div>
-            </div> 
+                </nav>
+            </div>
         </header>
         <section class="masthead">
             <div id="masthead-overlay">
@@ -71,20 +71,20 @@
             <section id="sectionTwo">
                 <div>
                     <h2>CTA One</h2>
-                    <div class="background-zoom"></div>
+                    <div class="background-zoom"></div> <!-- images have their own container so the h2 is not moved -->
                 </div>
                 <div>
                     <h2>CTA Two</h2>
                     <div class="backgroundTwo-zoom"></div>
                 </div>
             </section>
-            <section id="sectionThree">
+            <section id="sectionThree"> <!-- Row two and row three are under section three in order to have a dark blue background for clip path -->
                 <h2>Row Two</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut in vulputate magna. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce enim ex, sollicitudin eu ex at, tempor ultrices justo. Quisque aliquam ultricies augue non pellentesque. Aliquam nec lacinia sem. Nam dictum lacinia libero, in tempor ipsum aliquet consequat.</p>
                 <section id="sectionThreeImage">
                     <div>
                         <h2>Row Three</h2>
-                        <div id="button-Container">
+                        <div id="button-Container"> <!-- flex container to format on smaller screens -->
                             <div class="button-1-Container">
                                 <a href="index.html" class = "button-1" >Hover One</a>
                             </div>
@@ -97,7 +97,7 @@
             </section>
             <section id="sectionFive">
                 <form action="index.html" method="POST">
-                    <div id="name-row">
+                    <div id="name-row"> <!-- flex container to adjust layout on smaller screens -->
                         <input type="text" id="first-name" name="first-name" placeholder="First Name" required>
                         
                         <input type="text" id="last-name" name="last-name" placeholder="Last Name" required>
